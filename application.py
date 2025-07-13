@@ -130,8 +130,6 @@ def high_cpu():
             primes.append(num)
     return f"Calculated {len(primes)} prime numbers."
 
-#----------Lab 5 - high_cpu() and high_memory()-----------
-
 @app.route('/high-memory')
 def high_memory():
     # Simulate memory load
