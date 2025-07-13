@@ -7,7 +7,7 @@ variables:
   - name: projectName
     value: 'Training-Sutdent-099'              # <-- Update this
   - name: buildPipelineName
-    value: 'finweb_yourname_build'       # <-- Update this
+    value: 'finapi_yourname_build'       # <-- Update this
   - name: artifactName
     value: 'api'
   - name: targetFile
@@ -15,7 +15,7 @@ variables:
   - name: resourceGroup
     value: 'Training-Student-099'          # <-- Update this
   - name: webAppName
-    value: 'finweb-student099'                  # <-- Update this Azure Web App target
+    value: 'finapi-student099'                  # <-- Update this Azure Web App target
 
 steps:
 - script: |
