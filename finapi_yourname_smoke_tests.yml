@@ -1,5 +1,13 @@
 trigger: none
 
+resources:
+  pipelines:
+    - pipeline: buildPipeline
+      source: finapi_yourname_deploy
+      trigger:
+        branches:
+          include:
+            - main
 pool:
   name: student-lab-pool
 
