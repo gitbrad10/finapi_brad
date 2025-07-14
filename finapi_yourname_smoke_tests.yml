@@ -1,21 +1,23 @@
 trigger: none
 
-#pool:
-#  name: student-lab-pool
-
+resources:
+  pipelines:
+    - pipeline: buildPipeline
+      source: finapi_yourname_deploy
+      trigger:
+        branches:
+          include:
+            - main
+pool:
+  name: student-lab-pool
+ 
 steps:
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.10'
-    displayName: "Use Python 3.10"
-
   - script: |
-      python -m pip install --upgrade pip
-      pip install pytest requests
+      /azagent/venv/bin/pip3 install pytest requests
     displayName: "Install dependencies"
 
   - script: |
-      pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml
+      /azagent/venv/bin/python3 -m pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml
     displayName: "Run full smoke test suite"
 
   - task: PublishTestResults@2
