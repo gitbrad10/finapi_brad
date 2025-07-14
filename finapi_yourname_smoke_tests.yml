@@ -20,14 +20,6 @@ steps:
       /azagent/venv/bin/python3 -m pytest -s tests/smoke_tests.py --junitxml=smoke-results.xml
     displayName: "Run full smoke test suite"
 
- 
-  - task: PublishTestResults@2
-    condition: always()
-    inputs:
-      testResultsFiles: 'smoke-results.xml'
-      testRunTitle: 'Post-deployment Smoke Test'
-      failTaskOnFailedTests: true
-
   - task: PublishTestResults@2
     condition: always()   
     inputs:
