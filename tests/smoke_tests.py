@@ -1,6 +1,6 @@
 import requests
 
-BASE_URL = "https://finapi-student099.azurewebsites.net" # <------ Replace with your actual base URL
+BASE_URL = "https://finapi-student099.azurewebsites.net/" # <------ Replace with your actual base URL
 
 def test_home():
     r = requests.get(f"{BASE_URL}/")
