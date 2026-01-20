@@ -63,4 +63,4 @@ jobs:
         with:
           app-name: 'finapi-brad'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1EBEEB66923E4BD99703A6B0B28BACC5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ADFEAC5CC357489292662F49B2BC2727 }}
